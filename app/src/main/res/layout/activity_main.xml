@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="left"
+        android:hint="Enter a Number"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:id="@+id/firstRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        >
+        <Button
+            android:id="@+id/onebut"
+            android:text="@string/one"
+            android:textColor="@color/black"
+            android:drawableRight="@color/Coral"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+
+            />
+
+        <Button
+            android:id="@+id/twobut"
+            android:text="@string/two"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/threebut"
+            android:text="@string/three"
+            android:backgroundTint="@color/Coral"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:id="@+id/addbut"
+            android:text="@string/add"
+            android:textSize="20sp"
+            android:backgroundTint="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRow"
+        >
+        <Button
+            android:id="@+id/fourbut"
+            android:text="@string/four"
+            android:textColor="@color/black"
+            android:drawableRight="@color/Coral"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+
+            />
+
+        <Button
+            android:id="@+id/fivebut"
+            android:text="@string/five"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/sixbut"
+            android:text="@string/six"
+            android:backgroundTint="@color/Coral"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:id="@+id/minusbut"
+            android:text="@string/minus"
+            android:textSize="20sp"
+            android:backgroundTint="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondRow"
+        >
+        <Button
+            android:id="@+id/sevenbut"
+            android:text="@string/seven"
+            android:textColor="@color/black"
+            android:drawableRight="@color/Coral"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+
+            />
+
+        <Button
+            android:id="@+id/eightbut"
+            android:text="@string/eight"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/ninebut"
+            android:text="@string/nine"
+            android:backgroundTint="@color/Coral"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:id="@+id/multibut"
+            android:text="@string/multi"
+            android:textSize="20sp"
+            android:backgroundTint="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourthRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdRow"
+        >
+        <Button
+            android:id="@+id/Cbut"
+            android:text="@string/C"
+            android:textColor="@color/black"
+            android:drawableRight="@color/Coral"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+
+            />
+
+        <Button
+            android:id="@+id/zerobut"
+            android:text="@string/zero"
+            android:backgroundTint="@color/Coral"
+            android:textSize="20sp"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/equalbut"
+            android:text="@string/equal"
+            android:backgroundTint="@color/Coral"
+            android:drawableRight="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:id="@+id/divbut"
+            android:text="@string/div"
+            android:textSize="20sp"
+            android:backgroundTint="@color/Coral"
+            android:drawableLeft="@color/Coral"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/historybut"
+        android:text="@string/history"
+        android:textSize="20sp"
+        android:backgroundTint="@color/Violet"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarButtonStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fourthRow"
+        />
+
+    <TextView
+        android:id="@+id/historyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="left"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/historybut"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
