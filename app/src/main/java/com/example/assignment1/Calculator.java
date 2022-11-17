@@ -8,6 +8,7 @@ public class Calculator {
     ArrayList<String> enterValues = new ArrayList<String>();
     ArrayList<String> historyList = new ArrayList<String>();
     int calculatedResult = 0;
+    Boolean wrongResult =false;
     String error ="";
     void push(String value)
     {
@@ -16,7 +17,7 @@ public class Calculator {
         if(value.equalsIgnoreCase("="))
         {
             calculatedResult = calculate();
-            if(calculatedResult!=0) {
+            if(wrongResult==false) {
                 enterValues.add(String.valueOf(calculatedResult));
             }
         }
@@ -41,10 +42,8 @@ public class Calculator {
             //int j = i + 1;
             if (i == 0 || i%2==0) {
                 num=(String) valuesArray[i];
-                if(isNumeric(num)==0){
-                    result=0;
-                }
-                else{
+                isNumeric(num);
+                if(wrongResult==false){
                     if(i==0)
                         result=isNumeric((String) valuesArray[i]);
                 }
@@ -59,42 +58,36 @@ public class Calculator {
                 num=(String) valuesArray[i+1];
                 switch (op) {
                     case "+":
-                        if(isNumeric(num)==0)
-                            result=0;
-                        else
+                        if(wrongResult==false)
                         result = result + isNumeric(num);
                         break;
                     case "-":
-                        if(isNumeric(num)==0)
-                            result=0;
-                        else
+                        if(wrongResult==false)
                             result = result - isNumeric(num);
                         break;
                     case "*":
-                        if(isNumeric(num)==0)
-                            result=0;
-                        else
+                        if(wrongResult==false)
                             result = result * isNumeric(num);
                         break;
                     case "/":
-                        if(isNumeric(num)==0)
-                            result=0;
-                        else{
+                      if(wrongResult==false)
                             try{
-                        result = result / isNumeric(num);}
+                        result = result / isNumeric(num);
+                            }
                         catch (ArithmeticException e){
                             error="Number is divided by wrong value.";
-                        }}
+                            wrongResult=true;
+                        }
                         break;
                     default:
-                        error = "At position: " + (i + 1) + " there should be an operator.";
-                        result = 0;
+                        error = "operator is not correct";
+                        wrongResult=true;
                 }
 
                 }
                 else {
                     error = "At position: " + (i + 1) + " there should be an operator.";
-                    result = 0;
+                    wrongResult=true;
                 }
 
             }
@@ -105,9 +98,10 @@ public class Calculator {
         int result=0;
         if (!num.matches("[0-9]")) {
             error = " there should operators be followed by number.";
-            result =0;
+            wrongResult=true;
 
         } else {
+            wrongResult=false;
             result = Integer.parseInt(num);
         }
         return result;

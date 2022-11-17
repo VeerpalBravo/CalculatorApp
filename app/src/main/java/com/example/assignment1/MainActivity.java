@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             if(value.equalsIgnoreCase("="))
             {
-                if(c.calculatedResult==0) {
+                if(c.wrongResult==true) {
 
                     Toast.makeText(MainActivity.this,c.error,Toast.LENGTH_LONG).show();
                 }
